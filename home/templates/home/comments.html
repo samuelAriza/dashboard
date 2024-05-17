@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% load plotly_dash %}
+
+<div style="margin-bottom: 100px;">
+  <h1>Comments</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus dolor a libero beatae non ab minima fugiat facilis cumque quia itaque, perspiciatis fuga debitis nostrum corrupti sit adipisci animi inventore.</p>
+</div>
+
+<div class="grid gap-12 grid-cols-2">
+{% for i in comments %}
+<div class="grid__item item w-100 text-white relative">
+  <div class="item__content h-full w-full p-4 bg-black relative border-2 flex flex-col">
+    <div class="font-bold mb-2">{{ i }}</div>
+    <p class="flex-grow mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aperiam, sit, minus numquam temporibus iure earum, id vel illum commodi fuga. Esse soluta voluptates hic ratione est et nostrum tempore!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus, temporibus eum molestiae earum facilis repudiandae optio hic quaerat facere expedita, quibusdam porro, fugit harum tempora qui exercitationem cum? Perferendis, dignissimos?Temporal is a perfect fit for orchestrating microservices Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo asperiores ullam sunt dolorum officiis impedit soluta, eaque ipsa a aliquam modi quia accusantium, excepturi similique totam commodi, quam rerum pariatur!.</p>
+  </div>
+</div>
+{% endfor %}
+</div>
+
+
+
+{% endblock %}

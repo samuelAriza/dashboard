@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% load plotly_dash %}
+
+<div style="margin-bottom: 100px;">
+  <h1>Charts</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus dolor a libero beatae non ab minima fugiat facilis cumque quia itaque, perspiciatis fuga debitis nostrum corrupti sit adipisci animi inventore.</p>
+</div>
+<div class="card w-100"  style="margin: 10px;">
+    <div class="card-header" style="color: white; background-color: black; text-align: center;">
+      Calificación Vs. Cantidad de comentarios 
+    </div>
+    <div class="card-body"  style="background-color: black;">
+      <blockquote class="blockquote mb-0">
+        {% plotly_app name='BarDiagram' ratio=0.4 %}
+      </blockquote>
+    </div>
+</div>
+
+<div class="card w-100"  style="margin: 10px;">
+    <div class="card-header" style="color: white; background-color: black; text-align: center;">
+      Cantidad porcentual respecto al total de comentarios positivos, negativos y neutros
+    </div>
+    <div class="card-body"  style="background-color: black;">
+      <blockquote class="blockquote mb-0">
+        {% plotly_app name='PieDiagram' ratio=0.4 %}
+      </blockquote>
+    </div>
+</div>
+
+<div class="card w-100"  style="margin: 10px;">
+  <div class="card-header" style="color: white; background-color: black; text-align: center;">
+    Cantidad porcentual respecto al total de comentarios positivos, negativos y neutros
+  </div>
+  <div class="card-body"  style="background-color: black;">
+    <blockquote class="blockquote mb-0">
+      {% plotly_app name='HistogramDiagram' ratio=0.4 %}
+    </blockquote>
+  </div>
+</div>
+
+<div class="card w-100"  style="margin: 10px;">
+  <div class="card-header" style="color: white; background-color: black; text-align: center;">
+    Cantidad porcentual respecto al total de comentarios positivos, negativos y neutros
+  </div>
+  <div class="card-body"  style="background-color: black;">
+    <blockquote class="blockquote mb-0">
+      {% plotly_app name='HoursDiagram' ratio=0.4 %}
+    </blockquote>
+  </div>
+</div>
+
+
+{{ plot1 | safe }}
+
+{% endblock %}
